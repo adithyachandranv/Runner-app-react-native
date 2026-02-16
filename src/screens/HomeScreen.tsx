@@ -3,15 +3,21 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { RootStackParamList } from '../../App';
+import CalenderList from '../components/CalenderHome/CalenderList';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 export default function HomeScreen({ navigation }: Props) {
     return (
         <View className="flex-1 bg-gray-100 dark:bg-neutral-900 pt-16 px-5">
-            <View className="mb-8">
+
+            <View className="mb-4">
                 <Text className="text-3xl font-bold text-gray-800 dark:text-white">Good Morning, Runner!</Text>
                 <Text className="text-base text-gray-500 dark:text-gray-400 mt-1">Ready to beat your record?</Text>
+            </View>
+
+            <View className="h-24 mb-6">
+                <CalenderList />
             </View>
 
             {/* Total Stats Card */}

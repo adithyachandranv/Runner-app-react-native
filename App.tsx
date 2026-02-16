@@ -43,7 +43,11 @@ const TAB_SCREENS = [
 ];
 
 
+import { useColorScheme } from 'nativewind';
+
 function MainTabs() {
+    const { colorScheme } = useColorScheme();
+    const isDark = colorScheme === 'dark';
     return (
         <Tab.Navigator
             screenOptions={({ route }) => {
@@ -59,7 +63,7 @@ function MainTabs() {
 
                         left: 20,
                         right: 20,
-                        backgroundColor: '#2C2C2C',
+                        backgroundColor: isDark ? '#2C2C2C' : '#FFFFFF',
                         borderTopWidth: 0,
                         borderRadius: 40,
                         height: 80,
@@ -81,10 +85,10 @@ function MainTabs() {
                             return (
                                 <View
                                     style={{
-                                        backgroundColor: '#e6ed51ff',
+                                        backgroundColor: isDark ? '#e6ed51ff' : '#3B82F6', // Yellow (Dark) vs Blue (Light)
                                         width: 50,
                                         height: 50,
-                                        borderRadius: 25,
+                                        borderRadius: 15,
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         elevation: 5,
@@ -93,7 +97,7 @@ function MainTabs() {
                                     <Ionicons
                                         name={iconName as any}
                                         size={24}
-                                        color="#232323ff"
+                                        color={isDark ? '#232323ff' : '#FFFFFF'} // Black on Yellow vs White on Blue
                                     />
                                 </View>
                             );
@@ -103,7 +107,7 @@ function MainTabs() {
                             <Ionicons
                                 name={iconName as any}
                                 size={28}
-                                color={color}
+                                color={isDark ? '#D1D5DB' : '#6B7280'}
                             />
                         );
                     },
