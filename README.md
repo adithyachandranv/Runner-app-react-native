@@ -9,7 +9,8 @@ A modern, feature-rich running tracker application built with **React Native**, 
 *   **📱 Modern UI**: 
     *   Custom **Floating Tab Bar** with animated interactions.
     *   Sleek, minimal design using **Tailwind CSS**.
-*   **📍 Location Services**: GPS integration for accurate tracking (In Progress).
+*   **📍 Location Services**: Real-time GPS integration for accurate tracking using `expo-location`.
+*   **🛠 Developer Tools**: Built-in `DEV_MODE` to simulate location updates for testing without moving.
 *   **📊 Statistics**: View your total distance and run counts at a glance.
 
 ## 🛠 Tech Stack

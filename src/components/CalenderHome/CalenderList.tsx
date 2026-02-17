@@ -39,6 +39,7 @@ export default function CalenderList() {
                 offset: 80 * index,
                 index,
             })}
+
         />
     );
 }
